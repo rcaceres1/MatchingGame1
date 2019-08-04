@@ -1,0 +1,44 @@
+html, * {
+    font-family: helvetica;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20vmin 20vmin 20vmin 15vmin;
+    grid-template-rows: 10vmin 10vmin 20vmin 20vmin;
+}
+
+main * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > h1, h2 {
+    grid-column: span 4;
+    margin: 5vmin;
+    justify-content: center;
+}
+
+#play-area1, #play-area2, #play-card1, #play-card2 {
+    border: 1vmin solid grey;
+    padding: 4vmin;
+}
+#play-card1 {
+    grid-column: span 1;
+}
+
+#play-card2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
