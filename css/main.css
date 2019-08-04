@@ -14,6 +14,7 @@ main {
     display: grid;
     grid-template-columns: 30vmin 20vmin 30vmin 20vmin;
     grid-template-rows: 10vmin 10vmin 10vmin 30vmin 30vmin;
+    background-color: black;
 }
 
 main * {
@@ -29,8 +30,10 @@ main > h1, h2 {
 }
 
 #play-area1, #play-area2, #play-card1, #play-card2 {
-    border: 1vmin solid grey;
+    border: 1vmin solid #F0FF33;
     padding: 4vmin;
+    color: white;
+    grid-row-gap: 5vmin;
 }
 
 #play-card1 {
@@ -44,10 +47,25 @@ main > h1, h2 {
 
 h1 {
     color: #33D6FF;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #level {
     color: #5CFF33;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#timer {
+    color: white;
+}
+
+#message {
+    color: white;
+}
+
+#dir {
+    color: #FB0606;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
