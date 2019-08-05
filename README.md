@@ -4,7 +4,7 @@
 
 ### [Pseudocode](https://docs.google.com/document/d/14FTY_xLncetqTluPfrlRwUfd78EFSW04xX4pkom6xgU/edit?usp=sharing)
 
-### Name of Game: Lucy's Matching Game!_(named after my late grandmother, Lucia Palacios)_
+### Name of Game: Lucy's Matching Game! _(named after my late grandmother, Lucia Palacios)_
 
 #### Background of Game: 
 
