@@ -4,7 +4,7 @@ html, * {
 }
 
 body {
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,9 +12,11 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 30vmin 20vmin 30vmin 20vmin;
-    grid-template-rows: 10vmin 10vmin 10vmin 30vmin 30vmin;
+    grid-template-columns: 20vmin 30vmin 20vmin 30vmin 20vmin;
+    grid-template-rows: 3vmin 3vmin 3vmin 40vmin 40vmin;
     background-color: black;
+    gap: 5vmin 0vmin;
+    border: 1vmin solid black;
 }
 
 main * {
@@ -24,25 +26,26 @@ main * {
 }
 
 main > h1, h2 {
-    grid-column: span 4;
+    grid-column: span 5;
     margin: 5vmin;
     justify-content: center;
 }
 
 #play-area1, #play-area2, #play-card1, #play-card2 {
     border: 1vmin solid #F0FF33;
+    border-radius: 5vmin;
     padding: 4vmin;
     color: white;
-    grid-row-gap: 5vmin;
 }
 
-#play-card1 {
-    grid-column: span 1;
+#play-area1, #play-card1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-#play-card2 {
-    grid-column-start: 3;
-    grid-column-end: 4;
+#play-area2, #play-card2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
 }
 
 h1 {
