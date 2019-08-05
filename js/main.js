@@ -1,7 +1,7 @@
 /*----- constants -----*/ 
-// const winAudio = new Audio("http://soundbible.com/mp3/iMac_Startup_Chime-Carlo_-1849294605.mp3");
-// const loseAudio = new Audio("http://soundbible.com/mp3/Zombie-Gibberish-SoundBible.com-589887278.mp3")
-// const outofTimeAudio = new Audio("http://soundbible.com/mp3/Industrial_Alarm-SoundBible.com-1012301296.mp3")
+const winAudio = new Audio("#");
+const loseAudio = new Audio("#");
+const outofTimeAudio = new Audio("#");
 
 const cards = {
     0: 'star',
@@ -22,14 +22,20 @@ const cards = {
 /*----- cached element references -----*/ 
 const baseCard = document.getElementById('play-area1');
 const choiceCard1 = document.getElementById('play-card1');
+console.log(`first choice is... ${choiceCard1}`)
+
 const choiceCard2 = document.getElementById('play-card2');
 
 /*----- event listeners -----*/ 
-// clickMatchCard = ;
+document.querySelector('#play-card1')
+    .addEventListener('click', playRound);
 
-// clickWrongCard = ;
+document.querySelector('#play-card2')
+    .addEventListener('click', playRound);
 
-// clickReset = ;
+document.getElementById('reset')
+    .addEventListener('click', init);
+
 
 /*----- functions -----*/
 init();
@@ -40,7 +46,8 @@ function init() {
     baseCard.innerText=cards[randomInt()];
     choiceCard1.innerText=(baseCard.innerText);
     choiceCard2.innerText=cards[randomInt()];
-    while (choiceCard1.innerText && baseCard.innerText !== choiceCard2.innerText) {
+    while (choiceCard1.innerText !== choiceCard2.innerText && 
+            baseCard.innerText !== choiceCard2.innerText) {
         return choiceCard2.innerText[randomInt()];
     }
     
@@ -51,13 +58,12 @@ function randomInt() {
     return rand;
 }
 
-// function render() {
-//     //render match
-//     if (cards.indexOf === matchCard)
-//         return winAudio;
-//     else if (cards.indexOf !== matchCard)
-//         return loseAudio; 
-// };
+function render() {
+    //render match
+    if (cards.indexOf === matchCard) return winAudio;
+    // else if (timer === 0) return loseAudio;
+    else return loseAudio;
+};
 
 function shuffleCards(cards) {
     cards.sort(function() {
@@ -68,8 +74,10 @@ function shuffleCards(cards) {
 
 function playRound() {
     let baseCard = document.getElementById('play-area1');
+    console.log("It's working!");
 
 };
+
 
 
 
