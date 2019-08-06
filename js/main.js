@@ -16,6 +16,13 @@ const cards = {
     9: 'pencil'
 };
 
+// const cardsArr = {
+//     0: {
+//         name: 'star',
+//         img: '<path >'
+//     },
+// }
+
 /*----- app's state (variables) -----*/ 
  var round, win; 
  // make new constants that store the inner text value of play cards
@@ -46,43 +53,50 @@ function init() {
     
     function randomInt() {
         let rand = Math.floor(Math.random() * Object.keys(cards).length);
+        console.log (parseInt(rand))
         return rand;
     }
     
     function render() {
         
-
-        console.log(`base card is... ${baseCard.innerText}`)
-        console.log(`first choice is... ${choiceCard1.innerText}`)
-        console.log(`second choice is... ${choiceCard2.innerText}`)
-        //render match
     };
     
     function verifyMatch(element) {
-        console.log(element);
     if (baseCard.innerText === element.innerText) {
         console.log('You guessed correctly');
         shuffleCards();
         return winAudio;
     }
-    // else if (timer === 0) return loseAudio;
+    
     else {
         console.log('You guessed incorrectly');
         init();
         return loseAudio;
     }
+
 }
 
 function shuffleCards() {
-    baseCard.innerText=cards[randomInt()];
-    choiceCard1.innerText=(baseCard.innerText);
-    choiceCard2.innerText=cards[randomInt()];
-    while (choiceCard1.innerText !== choiceCard2.innerText && 
-            baseCard.innerText !== choiceCard2.innerText) {
-            return choiceCard2.innerText[randomInt()];
-        }     
-    render();
-};
+    function shuffle(array) {
+       return array.sort(() => Math.random() - 0.5);
+    }
+
+    let base = cards[randomInt()];
+    let card1 = base;
+    let card2 = cards[randomInt()];
+
+    let gameArr = []
+
+    gameArr.push(card1, card2)
+
+    let shuffledArr = shuffle(gameArr)
+
+    baseCard.innerText = base
+    choiceCard1.innerText = `${shuffledArr[0]}`
+    choiceCard2.innerText = `${shuffledArr[1]}` 
+    };
+
+
 
 function playRound(evt) {
     verifyMatch(evt.target);
