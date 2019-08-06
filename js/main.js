@@ -25,7 +25,7 @@ const cards = {
 
 /*----- app's state (variables) -----*/ 
  var round, win; 
- // make new constants that store the inner text value of play cards
+ 
 
 /*----- cached element references -----*/ 
 const baseCard = document.getElementById('play-area1');
