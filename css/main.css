@@ -35,7 +35,7 @@ main > h1, h2 {
     border: 1vmin solid #F0FF33;
     border-radius: 5vmin;
     padding: 4vmin;
-    color: white;
+    
 }
 
 #play-area1, #play-card1 {
@@ -60,6 +60,7 @@ h1 {
 
 #timer {
     color: white;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #message {
