@@ -12,7 +12,7 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 20vmin 30vmin 20vmin 30vmin 20vmin;
+    grid-template-columns: 20vmin 30vmin 30vmin 30vmin 20vmin;
     grid-template-rows: 3vmin 3vmin 3vmin 40vmin 40vmin;
     background-color: black;
     gap: 5vmin 0vmin;
@@ -31,19 +31,28 @@ main > h1, h2 {
     justify-content: center;
 }
 
-#play-area1, #play-area2, #play-card1, #play-card2 {
+.game-cards {
+    background-size: cover;
+}
+
+#play-area1, #play-card1, #play-card2 {
     border: 1vmin solid #F0FF33;
     border-radius: 5vmin;
     padding: 4vmin;
     
 }
 
-#play-area1, #play-card1 {
+#play-area1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+#play-card1 {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-#play-area2, #play-card2 {
+#play-card2 {
     grid-column-start: 4;
     grid-column-end: 5;
 }
@@ -58,9 +67,7 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 
-#timer {
-    color: white;
-    font-family: 'Quicksand', sans-serif;
+
 }
 
 #message {
