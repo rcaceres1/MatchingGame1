@@ -1,27 +1,20 @@
 /*----- constants -----*/ 
-const winAudio = new Audio("#");
-const loseAudio = new Audio("#");
-const outofTimeAudio = new Audio("#");
+const winAudio = new Audio("sounds/winner.wav");
+const loseAudio = new Audio("sounds/lose.wav");
+const outofTimeAudio = new Audio("sounds/alarm.wav");
 
 const cards = {
-    0: 'star',
-    1: 'apple',
-    2: 'banana',
-    3: 'storm', 
-    4: 'hat', 
-    5: 'dog', 
-    6: 'happy',
-    7: 'frog',
-    8: 'cup',
-    9: 'pencil'
+    0: 'pics/apple.jpg',
+    1: 'pics/star.jpg',
+    2: 'pics/banana.jpg',
+    3: 'pics/storm.jpg',
+    4: 'pics/hat.jpg',
+    5: 'pics/dog.jpg',
+    6: 'pics/happy.jpg',
+    7: 'pics/frog.jpg',
+    8: 'pics/cup.jpg',
+    9: 'pics/pencil.jpg'
 };
-
-// const cardsArr = {
-//     0: {
-//         name: 'star',
-//         img: '<path >'
-//     },
-// }
 
 /*----- app's state (variables) -----*/ 
  var round, win; 
@@ -62,9 +55,9 @@ function init() {
     };
     
     function verifyMatch(element) {
-    if (baseCard.innerText === element.innerText) {
-        console.log('You guessed correctly');
+    if (baseCard.cards === element.cards) {
         shuffleCards();
+        console.log('You guessed correctly');
         return winAudio;
     }
     
@@ -91,9 +84,9 @@ function shuffleCards() {
 
     let shuffledArr = shuffle(gameArr)
 
-    baseCard.innerText = base
-    choiceCard1.innerText = `${shuffledArr[0]}`
-    choiceCard2.innerText = `${shuffledArr[1]}` 
+    baseCard.cards = base
+    choiceCard1.cards = `${shuffledArr[0]}`
+    choiceCard2.cards = `${shuffledArr[1]}` 
     };
 
 
