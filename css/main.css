@@ -69,6 +69,7 @@ h1 {
 
 #message {
     color: white;
+    font-family: 'Quicksand', sans-serif;
     grid-row-start: 3;
     grid-row-end: 4;
 }
