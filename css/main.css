@@ -67,11 +67,10 @@ h1 {
     font-family: 'Quicksand', sans-serif;
 }
 
-
-}
-
 #message {
     color: white;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 #dir {

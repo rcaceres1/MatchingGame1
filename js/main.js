@@ -17,18 +17,18 @@ const cards = {
 };
 
 /*----- app's state (variables) -----*/ 
- var round, win, countDown; 
+ var round, win; 
  
 
 /*----- cached element references -----*/ 
 const baseCard = document.getElementById('play-area1');
 const choiceCard1 = document.getElementById('play-card1');
 const choiceCard2 = document.getElementById('play-card2');
-const playAreaOne = document.querySelector('#play-area1');
-const playCardOne = document.querySelector('#play-card1');
-const playCardTwo = document.querySelector('#play-card2');
+// const playAreaOne = document.querySelector('#play-area1');
+// const playCardOne = document.querySelector('#play-card1');
+// const playCardTwo = document.querySelector('#play-card2');
 var message = document.querySelector('#message');
-const gameCards = document.querySelectorAll('.game-cards');
+//const gameCards = document.querySelectorAll('.game-cards');
 
 /*----- event listeners -----*/ 
 document.querySelector('#play-card1')
@@ -46,7 +46,6 @@ init();
 function init() {
     round = 0;
     win = null;
-    countDown = 7000;
     shuffleCards();
     }
     
@@ -66,9 +65,10 @@ function init() {
     }
     
     else {
-        message.innerHTML = `Almost...try again!`;
-        init();
+        message.innerHTML = `Almost...try again!`; 
+        init(); 
         return loseAudio;
+         
     }
 
 }
@@ -86,33 +86,15 @@ function shuffleCards() {
     gameArr.push(card1, card2)
 
     let shuffledArr = shuffle(gameArr)
-    let randShuffArrIdx = Math.floor(Math.random() * shuffledArr.length);
+    
     baseCard.style.backgroundImage = `url(${shuffledArr[0]})`;
     choiceCard1.style.backgroundImage = `url(${shuffledArr[0]})`;
-    choiceCard2.style.backgroundImage = `url(${shuffledArr[randShuffArrIdx]})`;
+    choiceCard2.style.backgroundImage = `url(${shuffledArr[1]})`;
     };
 
-//'background-image': 'url(' + cards[idx] + ')'
-//document.getElementById("play-card1").style.
-//  backgroundImage = "url(" + dir + images[randomCount] + ")";
-// document.getElementById("play-card1").style.
-//   backgroundImage = 'url(' + cards[idx] + ')'
-//
-//document.getElementById('divID').style.backgroundImage = 
-//  "url(" + dir + images[randomCount] + ")";
 function playRound(evt) {
     verifyMatch(evt.target);
 };
 
-
-// Notes for updating background images
-
-/*
-document.getElementById("play-card1")
-.style.backgroundImage = `url(${cards[0]})`;
-
-*/
-
-
-
-
+// let randShuffArrIdx = Math.floor(Math.random() * shuffledArr.length;
+// randShuffArrIdx
