@@ -24,11 +24,7 @@ const cards = {
 const baseCard = document.getElementById('play-area1');
 const choiceCard1 = document.getElementById('play-card1');
 const choiceCard2 = document.getElementById('play-card2');
-// const playAreaOne = document.querySelector('#play-area1');
-// const playCardOne = document.querySelector('#play-card1');
-// const playCardTwo = document.querySelector('#play-card2');
 var message = document.querySelector('#message');
-//const gameCards = document.querySelectorAll('.game-cards');
 
 /*----- event listeners -----*/ 
 document.querySelector('#play-card1')
@@ -51,7 +47,6 @@ function init() {
     
     function randomInt() {
         let rand = Math.floor(Math.random() * Object.keys(cards).length);
-        console.log (parseInt(rand))
         return rand;
     }
     
@@ -68,7 +63,6 @@ function init() {
         message.innerHTML = `Almost...try again!`; 
         init(); 
         return loseAudio;
-         
     }
 
 }
@@ -78,23 +72,30 @@ function shuffleCards() {
        return array.sort(() => Math.random() - 0.5);
     }
 
+    function checkValue(c2, b) {
+        if(c2 === b) {
+            c2 = cards[randomInt()]   
+        }
+        card2 = c2 
+    }
+
     let base = cards[randomInt()];
     let card1 = base;
     let card2 = cards[randomInt()];
     let gameArr = []
 
+    checkValue(card2, base)
+
     gameArr.push(card1, card2)
 
     let shuffledArr = shuffle(gameArr)
-    
-    baseCard.style.backgroundImage = `url(${shuffledArr[0]})`;
+
+    baseCard.style.backgroundImage = `url(${base})`;
     choiceCard1.style.backgroundImage = `url(${shuffledArr[0]})`;
     choiceCard2.style.backgroundImage = `url(${shuffledArr[1]})`;
-    };
+    
+}
 
 function playRound(evt) {
     verifyMatch(evt.target);
 };
-
-// let randShuffArrIdx = Math.floor(Math.random() * shuffledArr.length;
-// randShuffArrIdx
