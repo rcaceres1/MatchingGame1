@@ -1,8 +1,4 @@
 /*----- constants -----*/ 
-const winAudio = new Audio("sounds/winner.wav");
-const loseAudio = new Audio("sounds/lose.wav");
-
-
 const cards = {
     0: 'pics/apple.jpg',
     1: 'pics/star.jpg',
@@ -56,13 +52,12 @@ function init() {
     if (base === choice) {
         shuffleCards();
         message.innerHTML = `GOOD JOB! It's a match!`;
-        return winAudio;
+        return shuffleCards();
     }
     
     else {
         message.innerHTML = `Almost...try again!`; 
-        init(); 
-        return loseAudio;
+        return init();  
     }
 
 }

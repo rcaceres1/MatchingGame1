@@ -10,10 +10,9 @@
 
 The game is a matching cards game. It's the perfect type of game for the students who 
 have low-incidence disabilities and cortical visual impairment (CVI). Students with CVI 
-and multiple disabilities need high contrast pictures on a black background, look for
-this description in the Screenshots section. 
+and multiple disabilities need high contrast pictures on a black background (screenshots below).  
 
-#### Screenshots: _Coming soon!_
+#### Screenshots: [Check them out!](https://docs.google.com/presentation/d/19l7PTf0PlTPB_83qDeAdS42-fYin4YePjDz8moMD6fk/edit?usp=sharing)
 
 #### Technologies Used: HTML, CSS, and JavaScript
 
@@ -21,15 +20,11 @@ this description in the Screenshots section.
 _I will be demonstrating a combination of Level 2 and Level 3 (Shown in the Next Steps section_
 
 1. Player will have to match a base card with a matching card that is outside of the space
-where said matching card belongs. They will have to click on the board for the card to move
-to the space. When they 'click', a motivating sound will play, then move to the next set. 
+where said matching card belongs. When they click on the correct card, a message appears that they found the match. If they click on the wrong card, a message will display to try again. When they 'click', a motivating sound will play, then move to the next set. 
 
-2. In order to win, the player will have to match ten cards in under 5 minutes. 
-If unable to match the different sets within the time, player loses. 
+2. For the purposes of this game, there are ten cards for the player to match. The choice cards will be displayed on the bottom, and the matching card changes location randomly as the player continues throughout the game.  
 
-**A:** There will be a timer displayed that will count down. 
-
-**B:** Reset button on the screen so that board can be rendered again.
+**Reset Button:** The reset button on the screen is available so that board can be rendered again.
 
 
 
@@ -55,9 +50,4 @@ a complicated game based on the child's ability.
 **-Other Enhancements:** Animations and sounds every time the child gets it right to 
 keep them motivated, as this population needs constant, consistent positive reinforcement.
 
-
-
-_For the purposes of this project, I am incorporating the timer, but in my live version, it will be
-used as a settings option, since some students, especially students with gross motor delays, 
-need longer response times to 'click' on the screen._
 
